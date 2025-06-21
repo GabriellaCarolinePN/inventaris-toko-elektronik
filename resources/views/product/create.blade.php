@@ -42,8 +42,7 @@
                     <div class="col-12">
                         <div class="mb-3">
                             <label class="form-label">Deskripsi Produk</label>
-                            <textarea class="form-control" name="deskripsi_produk" placeholder="Tulis Deskripsi Produk" style="height: 100px"
-                                value="{{ old('deskripsi_produk') }}"></textarea>
+                            <textarea class="form-control" name="deskripsi_produk" placeholder="Tulis Deskripsi Produk" style="height: 100px">{{ old('deskripsi_produk') }}</textarea>
                             @error('deskripsi_produk')
                                 <div id="emailHelp" class="form-text">{{ $message }}</div>
                             @enderror

@@ -33,13 +33,15 @@ class ProdukController extends Controller
         $request->validate([
             'nama_produk' => 'required',
             'deskripsi_produk' => 'required',
-            'harga' => 'required',
-            'stok_barang' => 'required',
+            'harga' => 'required|numeric|min:0',
+            'stok_barang' => 'required|numeric|min:0',
         ], [
             'nama_produk.required' => 'Nama produk harus diisi',
             'deskripsi_produk.required' => 'Deskripsi produk harus diisi',
             'harga.required' => 'Harga harus diisi',
+            'harga.min' => 'Harga tidak boleh minus',
             'stok_barang.required' => 'Stok barang harus diisi',
+            'stok_barang.min' => 'Stok tidak boleh minus',
         ]);
 
         Product::create([

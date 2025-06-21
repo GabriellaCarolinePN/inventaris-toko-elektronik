@@ -42,7 +42,9 @@
                             <td scope="row">{{ $loop->iteration }}</td>
                             <td>{{ $item->nama_produk }}</td>
                             <td>{{ $item->deskripsi_produk }}</td>
-                            <td>Rp {{ number_format($item->harga, 0, ',', '.') }}</td>
+                            <td data-order="{{ $item->harga }}">
+                                Rp {{ number_format($item->harga, 0, ',', '.') }}
+                            </td>
                             <td>{{ $item->stok_barang }}</td>
                             <td>{{ $item->tanggal_dibuat }}</td>
                             <td>{{ $item->tanggal_diperbarui }}</td>
